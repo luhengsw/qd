@@ -4,8 +4,7 @@
 #
 #    pipenv requirements
 #
--i https://mirrors.cloud.tencent.com/pypi/simple/
---extra-index-url https://pypi.org/simple
+-i https://pypi.org/simple/
 aiofiles==24.1.0; python_version >= '3.8'
 aiohappyeyeballs==2.6.1; python_version >= '3.9'
 aiohttp==3.12.15; python_version >= '3.9'

@@ -32,7 +32,7 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
     - name: Publish Lite Package
       uses: docker/build-push-action@v4
-      if: github.ref == 'refs/heads/master'
+      #if: github.ref == 'refs/heads/master'
       with:
         context: .
         file: ./Dockerfile.lite

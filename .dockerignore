@@ -1,0 +1,6 @@
+.git
+.github
+ssh/
+docs/
+*.md
+config/
