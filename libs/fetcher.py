@@ -1023,7 +1023,9 @@ class Fetcher(object):
                         f"Failed at {entry['idx']}/{tpl_length} request, \\r\\nError: {e}, \\r\\nRequest URL: {entry['request']['url']}"
                     ) from e
                 if not result["success"]:
+                    log_value = env.get("variables", {}).get("__log__", "")
+                    log_prefix = f"{log_value}\\r\\n" if log_value else ""
                     raise Exception(
-                        f"Failed at {entry['idx']}/{tpl_length} request, \\r\\n{result['msg']}, \\r\\nRequest URL: {entry['request']['url']}"
+                        f"{log_prefix}Failed at {entry['idx']}/{tpl_length} request, \\r\\n{result['msg']}, \\r\\nRequest URL: {entry['request']['url']}"
                     )
         return env, request_limit
